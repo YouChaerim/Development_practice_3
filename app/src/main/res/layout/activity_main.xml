@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <ImageButton
+            android:id="@+id/button_home"
+            android:layout_width="124dp"
+            android:layout_height="25dp"
+            android:layout_gravity="left"
+            android:src="@drawable/logo"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="6dp"/>
+
+        <!-- viewpager to show images -->
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPagerMain"
+            android:layout_width="423dp"
+            android:layout_height="250dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="1dp" />
+
+        <LinearLayout
+            android:id="@+id/titleLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#BC4300FD"
+            android:orientation="horizontal" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentContainerView"
+            android:name="com.example.project_merge.FragmentUserInfo"
+            android:layout_width="match_parent"
+            android:layout_height="216dp" />
+
+        <ImageButton
+            android:id="@+id/imageBtn1"
+            android:layout_width="match_parent"
+            android:layout_height="370dp"
+            android:adjustViewBounds="false"
+            android:background="@color/white"
+            android:cropToPadding="false"
+            android:src="@drawable/group2" />
+
+
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
