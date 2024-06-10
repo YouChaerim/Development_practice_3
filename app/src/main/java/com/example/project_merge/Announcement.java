@@ -3,9 +3,6 @@ package com.example.project_merge;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.webkit.WebChromeClient;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,56 +11,91 @@ public class Announcement extends AppCompatActivity {
 
     private String TAG = MainActivity.class.getSimpleName();
 
-    private WebView webView = null;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.announcement);
 
         ImageButton button_back = findViewById(R.id.button_back);
+        ImageButton Announcements = findViewById(R.id.Announcements);
+        ImageButton Announcements2 = findViewById(R.id.Announcements2);
+        ImageButton Announcements3 = findViewById(R.id.Announcements3);
+        ImageButton Announcements4 = findViewById(R.id.Announcements4);
+        ImageButton Announcements5 = findViewById(R.id.Announcements5);
+        ImageButton Announcements6 = findViewById(R.id.Announcements6);
+        ImageButton Announcements7 = findViewById(R.id.Announcements7);
+        ImageButton Announcements8 = findViewById(R.id.Announcements8);
 
         button_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Announcement.this, MainActivity.class);
                 startActivity(intent);
-
             }
         });
 
-        webView = (WebView) findViewById(R.id.webview);
-
-        webView.setWebViewClient(new WebViewClient() {
+        Announcements.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onPageFinished(WebView view, String url) {
-                super.onPageFinished(view, url);
-//                // 페이지 로딩 완료 후, 아랫부분만 보여주기 위해 스크롤 조정
-//                view.postDelayed(new Runnable() {
-//                    @Override
-//                    public void run() {
-//                        // 페이지의 높이에서 웹뷰 높이를 빼면 아래쪽만 보여집니다.
-//                        view.scrollTo(0, 2100);
-//                    }
-//                },1); // 100ms 지연 후 실행, 필요한 경우 조정 가능
+            public void onClick(View view) {
+                Intent intent = new Intent(Announcement.this, notice1.class);
+                startActivity(intent);
             }
         });
 
-        webView.setWebChromeClient(new WebChromeClient());
+        Announcements2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Announcement.this, notice2.class);
+                startActivity(intent);
+            }
+        });
 
-        webView.getSettings().setLoadWithOverviewMode(true);
-        webView.getSettings().setUseWideViewPort(true);
+        Announcements3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Announcement.this, notice4.class);
+                startActivity(intent);
+            }
+        });
 
-        webView.getSettings().setSupportZoom(false);
-        webView.getSettings().setBuiltInZoomControls(false);
+        Announcements4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Announcement.this, notice5.class);
+                startActivity(intent);
+            }
+        });
 
-        webView.getSettings().setJavaScriptEnabled(true);
-        webView.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
-        webView.getSettings().setSupportMultipleWindows(true);
+        Announcements5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Announcement.this, notice6.class);
+                startActivity(intent);
+            }
+        });
 
-        webView.getSettings().setDomStorageEnabled(true);
-        webView.scrollTo(0, 2100);
+        Announcements6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Announcement.this, notice6.class);
+                startActivity(intent);
+            }
+        });
 
-        webView.loadUrl("https://www.mpva.go.kr/icnc/selectBbsNttList.do?key=708&bbsNo=163");
+        Announcements7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Announcement.this, notice8.class);
+                startActivity(intent);
+            }
+        });
+
+        Announcements8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Announcement.this, notice7.class);
+                startActivity(intent);
+            }
+        });
     }
 }

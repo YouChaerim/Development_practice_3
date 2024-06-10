@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <!--    공지 상세 부분-->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/button_back"
+            android:layout_width="74dp"
+            android:layout_height="51dp"
+            android:layout_gravity="left"
+            android:src="@drawable/back"
+            android:layout_marginEnd="105dp"
+            android:background="@color/white"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="공지사항"
+            android:textStyle="bold"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+
+
+
+    <!-- 4번 공지 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="3"
+            android:text="직행버스 신설노선 안내드립니다. 위 시간표는 예상 시간표입니다. 해당 직행버스 8203번은 80~90분 간격으로 운행되며 운행 상황 등에 따라 실제 도착시간과 다를 수 있습니다. 카카오맵, 네이버 지도, 경기 버스정보앱을 통해 실시간 운행정보를 확인할 수 있습니다. 터미널 전화번호 ○ 이천터미널 1688-3320 ○ 일죽터미널 1688-6575 ○ 안성터미널 1688-1845"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView04"
+            android:layout_width="260dp"
+            android:layout_height="432dp"
+            android:layout_gravity="center"
+            android:src="@drawable/image18"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </LinearLayout>
+</LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -67,32 +67,32 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//
-//        Interface apiService = RetrofitClient.getClient("https://apis.data.go.kr/").create(Interface.class);
-//
-//        Call<Response> call = apiService.getData("이강훈", 1, 50, "x/6LtYyI17RshlR6eaQ9X1ZFuQYqEzuUTHg9Z5AkIs12bI+QHlJxTw0/sX4Wp6K7LQ4Kg059Yl/UZM6dpQzI3w==");
-//
-//        call.enqueue(new Callback<Response>() {
-//            @Override
-//            public void onResponse(Call<Response> call, retrofit2.Response<Response> response) {
-//                if (response.isSuccessful()) {
-//                    Response data = response.body();
-//
-//
-//                    Log.d("here", data.getHeader().getResultMsg());
-//                    Log.d("!!!", data.getBody().get(0).getName());
-//                    // 여기서 데이터 처리
-//                } else {
-//                    // 에러 처리
-//                }
-//            }
-//
-//            @Override
-//            public void onFailure(Call<Response> call, Throwable t) {
-//                Log.d("herehere", t.toString());
-//                // 네트워크 에러 등 실패 처리
-//            }
-//        });
+
+        Interface apiService = RetrofitClient.getClient("https://apis.data.go.kr/").create(Interface.class);
+
+        Call<Response> call = apiService.getData("이강훈", 1, 50, "x/6LtYyI17RshlR6eaQ9X1ZFuQYqEzuUTHg9Z5AkIs12bI+QHlJxTw0/sX4Wp6K7LQ4Kg059Yl/UZM6dpQzI3w==");
+
+        call.enqueue(new Callback<Response>() {
+            @Override
+            public void onResponse(Call<Response> call, retrofit2.Response<Response> response) {
+                if (response.isSuccessful()) {
+                    Response data = response.body();
+
+
+                    Log.d("here", data.getHeader().getResultMsg());
+                    Log.d("!!!", data.getBody().get(0).getName());
+                    // 여기서 데이터 처리
+                } else {
+                    // 에러 처리
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Response> call, Throwable t) {
+                Log.d("herehere", t.toString());
+                // 네트워크 에러 등 실패 처리
+            }
+        });
 
     }
 

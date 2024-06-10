@@ -31,6 +31,15 @@
         <activity android:name=".Announcement" android:label="Announcement" />
         <activity android:name=".DetailPage" android:label="DetailPage" />
         <activity android:name=".Map_Marker" android:label="Map_Marker" />
+        <activity android:name=".notice1" android:label="Announcements" />
+        <activity android:name=".notice2" android:label="Announcements2" />
+        <activity android:name=".notice3" android:label="Announcements3" />
+        <activity android:name=".notice4" android:label="Announcements4" />
+        <activity android:name=".notice5" android:label="Announcements5" />
+        <activity android:name=".notice6" android:label="Announcements6" />
+        <activity android:name=".notice7" android:label="Announcements7" />
+        <activity android:name=".notice8" android:label="Announcements8" />
+
     </application>
 
 </manifest>

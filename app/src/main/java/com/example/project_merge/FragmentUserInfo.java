@@ -46,15 +46,16 @@ public class FragmentUserInfo extends Fragment {
                 Log.d("FragmentUserInfo", "Name: " + name);
 
                 if (name.isEmpty()) {
-                    Toast.makeText(getActivity(), "Please enter a name.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), "이름 입력해주세요.", Toast.LENGTH_SHORT).show();
                 } else {
-                    int memberId = sqLiteHelper.getMemberIdByName(name); // Get the member ID
-                    if (memberId != -1) { // If the member ID is valid
+                    int id = sqLiteHelper.getMemberIdByName(name); // Get the member ID
+                    if (id != -1) { // If the member ID is valid
                         Intent intent = new Intent(getActivity(), MainActivity2.class);
-                        intent.putExtra("memberId", memberId);
+                        intent.putExtra("id", id);
+                        intent.putExtra("name", name);
                         startActivity(intent);
                     } else {
-                        Toast.makeText(getActivity(), "User does not exist.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), "존재하지 않는 사용자 입니다.", Toast.LENGTH_SHORT).show();
                     }
                 }
 
@@ -86,30 +87,30 @@ public class FragmentUserInfo extends Fragment {
         return rootView;
     }
 
-//    private void callApiWithName(String name) {
-//        Interface apiService = RetrofitClient.getClient("https://apis.data.go.kr/").create(Interface.class);
-//
-//        Call<Response> call = apiService.getData(name, 1, 50, "API_KEY_HERE");
-//
-//        call.enqueue(new Callback<Response>() {
-//            @Override
-//            public void onResponse(Call<Response> call, retrofit2.Response<Response> response) {
-//                if (response.isSuccessful() && response.body() != null && !response.body().getBody().isEmpty()) {
-//                    // 데이터가 존재하면 다른 화면으로 전환
-//                    Intent intent = new Intent(getActivity(), MainActivity2.class);
-//                    intent.putExtra("name", name);
-//                    startActivity(intent);
-//                } else {
-//                    // 데이터가 존재하지 않을 경우
-//                    Toast.makeText(getActivity(), "존재하지 않는 이용자 입니다.", Toast.LENGTH_SHORT).show();
-//                }
-//            }
-//
-//            @Override
-//            public void onFailure(Call<Response> call, Throwable t) {
-//                Log.d("herehere", t.toString());
-//                Toast.makeText(getActivity(), "네트워크 에러가 발생했습니다.", Toast.LENGTH_SHORT).show();
-//            }
-//        });
-//    }
+    private void callApiWithName(String name) {
+        Interface apiService = RetrofitClient.getClient("https://apis.data.go.kr/").create(Interface.class);
+
+        Call<Response> call = apiService.getData(name, 1, 50, "API_KEY_HERE");
+
+        call.enqueue(new Callback<Response>() {
+            @Override
+            public void onResponse(Call<Response> call, retrofit2.Response<Response> response) {
+                if (response.isSuccessful() && response.body() != null && !response.body().getBody().isEmpty()) {
+                    // 데이터가 존재하면 다른 화면으로 전환
+                    Intent intent = new Intent(getActivity(), MainActivity2.class);
+                    intent.putExtra("name", name);
+                    startActivity(intent);
+                } else {
+                    // 데이터가 존재하지 않을 경우
+                    Toast.makeText(getActivity(), "존재하지 않는 이용자 입니다.", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Response> call, Throwable t) {
+                Log.d("herehere", t.toString());
+                Toast.makeText(getActivity(), "네트워크 에러가 발생했습니다.", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
 }

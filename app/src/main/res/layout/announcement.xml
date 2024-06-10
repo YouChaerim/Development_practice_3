@@ -4,50 +4,129 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    tools:ignore="MissingConstraints,WebViewLayout">
 
+
+    <!--공지사항-->
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:layout_width="411dp"
+        android:layout_height="844dp"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints,WebViewLayout"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/button_back"
+                android:layout_width="74dp"
+                android:layout_height="51dp"
+                android:layout_gravity="left"
+                android:src="@drawable/back"
+                android:layout_marginEnd="105dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="공지사항"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
 
         <ImageButton
-            android:id="@+id/button_back"
-            android:layout_width="74dp"
-            android:layout_height="51dp"
-            android:layout_gravity="left"
-            android:src="@drawable/back"
-            android:layout_marginEnd="105dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/Announcements"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:text="공지사항"
-            android:textStyle="bold"
-            android:textSize="20sp" />
+            android:layout_gravity="left"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="6dp"
+            android:background="@color/white"
+            android:src="@drawable/noticeimage" />
+
+
+        <ImageButton
+            android:id="@+id/Announcements3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="6dp"
+            android:background="@color/white"
+            android:src="@drawable/noticeimage3" />
+
+        <ImageButton
+            android:id="@+id/Announcements4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="6dp"
+            android:background="@color/white"
+            android:src="@drawable/noticeimg2" />
+
+
+        <ImageButton
+            android:id="@+id/Announcements2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="6dp"
+            android:background="@color/white"
+            android:src="@drawable/noticeimg" />
+
+        <ImageButton
+            android:id="@+id/Announcements5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="6dp"
+            android:background="@color/white"
+            android:src="@drawable/notice" />
+
+        <ImageButton
+            android:id="@+id/Announcements8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="6dp"
+            android:background="@color/white"
+            android:src="@drawable/group5" />
+
+        <ImageButton
+            android:id="@+id/Announcements7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="6dp"
+            android:background="@color/white"
+            android:src="@drawable/group6" />
+
+        <ImageButton
+            android:id="@+id/Announcements6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="6dp"
+            android:background="@color/white"
+            android:src="@drawable/group3" />
+
 
     </LinearLayout>
 
 
-    <WebView
-        android:id="@+id/webview"
-        android:layout_width="393dp"
-        android:layout_height="861dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="1dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-</LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+

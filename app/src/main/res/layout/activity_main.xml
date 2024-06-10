@@ -25,6 +25,7 @@
             android:layout_marginTop="6dp"/>
 
         <!-- viewpager to show images -->
+
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/viewPagerMain"
             android:layout_width="423dp"
@@ -45,7 +46,7 @@
             android:id="@+id/fragmentContainerView"
             android:name="com.example.project_merge.FragmentUserInfo"
             android:layout_width="match_parent"
-            android:layout_height="216dp" />
+            android:layout_height="311dp" />
 
         <ImageButton
             android:id="@+id/imageBtn1"

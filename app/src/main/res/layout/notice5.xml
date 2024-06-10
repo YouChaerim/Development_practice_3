@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Announcement"
+    android:orientation="vertical">
+
+    <!-- 공지 상세 부분 -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/button_back"
+            android:layout_width="74dp"
+            android:layout_height="51dp"
+            android:layout_gravity="left"
+            android:src="@drawable/back"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="105dp"
+            android:background="@color/white"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="공지사항"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <!-- 5번 공지 -->
+<LinearLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/notice_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:padding="16dp"
+        android:text="제12회 나라사랑 그림공모전을 개최합니다.
+공모주제:국가유공자에 대한 감사한 마음 표현 -내 주변에 계신 호국영웅 초상화 그리기 6.25, 월남전, 서해수호 등 보훈의 역사, 인물,장소, 스토리 등을 창의적으로 자유창작, 국내외 사적지 등 보훈현장 탐방 그림 접수기간 : 5.1.(수)~8.31.(토) (약 4개월)
+접수처 : 국립이천호국원 현충과 선양팀[TEL.(031-645-2333~2335)] 접수방법 : 신청서 및 개인정보 수집ㆍ이용동의서를 작품면에 반드시 부착하여 방문 및 우편(택배) 제출 - 주소 : (우17412)경기도 이천시 설성면 노성로 260 국립이천호국원 현충과 선양팀 심사발표 : 2024.9.23.(월) 국립이천호국원 홈페이지"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_back" />
+
+    <ImageView
+        android:id="@+id/imageView05"
+        android:layout_width="285dp"
+        android:layout_height="422dp"
+        android:src="@drawable/image19"
+        app:layout_constraintTop_toBottomOf="@id/notice_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

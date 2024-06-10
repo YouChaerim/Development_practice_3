@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 공지 상세 부분 -->
+    <LinearLayout
+        android:id="@+id/header_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="16dp">
+
+        <ImageButton
+            android:id="@+id/button_back"
+            android:layout_width="74dp"
+            android:layout_height="51dp"
+            android:layout_gravity="left"
+            android:src="@drawable/back"
+            android:layout_marginEnd="105dp"
+            android:background="@color/white"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="공지사항"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <!-- 공지 내용 -->
+    <TextView
+        android:id="@+id/notice_text_8"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="국립이천호국원 - 새소식 상세보기 - 제목, 내용, 파일, URL 정보 제공 국립이천호국원에 2024.2.11.(일) ~ 2024.2.29.(목) 기간 중 합장되신 배우자 분들의 봉안명패 제작 및 설치가 완료되었습니다. 2024년 2월 2차,3차 명패가 제작 및 설치되었습니다."
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/header_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView08"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/backg"
+        app:layout_constraintTop_toBottomOf="@id/notice_text_8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

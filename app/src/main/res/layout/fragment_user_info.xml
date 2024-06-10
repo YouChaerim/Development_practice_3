@@ -18,7 +18,6 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
                 android:text="이 름"
                 android:textSize="25sp"
                 android:textStyle="bold"
@@ -30,6 +29,33 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:hint="홍길동"
+                android:inputType="text"
+                android:maxLength="16"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="232dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:text="묘지번호"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edtNum"
+                android:layout_width="111dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:hint="000"
                 android:inputType="text"
                 android:maxLength="16"
                 android:paddingLeft="10dp"
